@@ -1,0 +1,23 @@
+Q1. What mean the interactive ?
+A1: Interactive means when a system responds to user actions like clicks, inputs, or events.
+
+Q2. What is a javascript ?
+A2: JavaScript is an object-oriented programming language that makes web pages interactive. It can be used for both frontend and backend development.
+
+Q3: What is let,const,var ?
+A3: let => let is a block-scoped variable. It can be updated and cannot redeclared in the same scope.
+    const => const is a also block-scoped variable. It cannot updated and can't redeclared in the same scope.
+    var => var is a function-scoped variable. It can be updated and redeclared in the same scope.
+
+Q4: What is a primitive and non-primitive ?
+A4: Primitive =>Primitive data type are immutable.meaning their value canont be changed.Javascript has the 7 types of primitive data type (Number,String,Boolen,Undefine,Symbol,Null,Bigint).
+    Non-Primitive => Non-Primitive data type are be changed.Javascript has the three type of non-primitive (Object,Array,Function).
+
+Q5: What is a DataType and how many types of data ?
+A5: DataType mens which type of the value or data call the data type. Example("India is No.1 country",1,true). so means we are use the double quotes("") this is string type 
+    data and use the number so number type of data and use the true or false value this is call the boolen type of data. Javascript has the 7 type of data types (Number,String,
+    Boolen,Undefine,Symbol,Null,Bigint). 
+
+
+array method (reduce)= Reduce is a JavaScript array method used to combine all elements of an array into a single value.
+array method (find) = find() is a JavaScript array method that returns the first element that matches a given condition.
