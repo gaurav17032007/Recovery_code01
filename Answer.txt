@@ -29,3 +29,16 @@ A7: A function is a reusable block of code used to perform a specific task. In J
 
 Q8: What is DOM Manipulation ?
 A8: DOM manipulation is the process of changing the content, structure, or style of a web page using JavaScript.
+       I learned this topics =>>
+    1. Selecting Elements (Must know)
+       document.getElementById
+       document.querySelector
+       document.querySelectorAll
+
+    2. Changing Content
+       textContent
+       innerHTML
+
+    3. Changing Styles
+       element.style.color
+       element.style.backgroundColor
