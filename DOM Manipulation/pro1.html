@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+        <h1 id="demo">Hello world</h1>
+        <button id="btn">click</button>
+        <button id="btn1">click</button>
+    <script>
+        let doc=document.getElementById("btn");
+        doc.addEventListener("click",()=>{
+            let text=document.getElementById("demo").textContent="Hello Text";
+            // document.getElementById("demo").innerHTML=`<h1>${text}</h1>`;
+        })
+        let doc1=document.getElementById("btn1");
+        doc1.addEventListener("click",()=>{
+            let text1=document.getElementById("demo").textContent="Hello world";
+            // document.getElementById("demo").innerHTML=`<h1>${text1}</h1>`;
+        })
+    </script>
+</body>
+</html>

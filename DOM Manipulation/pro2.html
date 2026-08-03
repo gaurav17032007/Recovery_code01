@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<div>
+    <h1 id="demo">Hello world</h1>
+    <button id="btn">click</button>
+    <button class="btn1">click1</button>
+    <button class="btn1">click2</button>
+    <button class="btn1">click3</button>
+    <button class="btn1">click4</button>
+</div>
+<script>
+    let selector=document.getElementById("btn");
+    selector.addEventListener("click",()=>{
+        document.querySelector("div #demo").textContent="Text Changed";
+    })
+    let selector2=document.getElementsByClassName("btn1")[3];
+    selector2.addEventListener("click",()=>{
+        document.querySelector("div #demo").textContent="Hello ";
+    })
+</script>
+</body>
+
+</html>

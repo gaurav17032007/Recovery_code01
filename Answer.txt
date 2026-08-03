@@ -26,3 +26,6 @@ A6: An operator is a symbol that performs operations on values, such as calculat
 Q7: What is a Functions and How many types of functions ?
 A7: A function is a reusable block of code used to perform a specific task. In JavaScript, common types include function declaration, function expression, arrow function, 
     anonymous function, and callback function.
+
+Q8: What is DOM Manipulation ?
+A8: DOM manipulation is the process of changing the content, structure, or style of a web page using JavaScript.
