@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="demo">click</button>
+    <script>
+        let doc;
+        let doc1 = document.getElementById("demo");
+        doc1.addEventListener("click", () => {
+            if (!doc) {
+                doc = document.createElement("div");
+                document.body.append(doc);
+
+                let h1 = document.createElement("h1");
+                h1.textContent = "Hello world";
+                doc.append(h1);
+
+                let bord = doc.style.border = "2px solid red";
+                doc.style.width = "50%";
+                doc.style.height = "90vh";
+                doc.style.backgroundColor = "black";
+                doc.style.color = "white";
+            }
+        })
+    </script>
+</body>
+
+</html>

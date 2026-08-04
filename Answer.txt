@@ -42,3 +42,18 @@ A8: DOM manipulation is the process of changing the content, structure, or style
     3. Changing Styles
        element.style.color
        element.style.backgroundColor
+       classList/add/remove/toggle
+       
+    4. Adding & Removing Elements
+        createElement
+        appendChild
+        remove()
+
+    5. Event Handling (very important)
+       addEventListener("click", ...)
+       input, submit
+
+    6. Traversing (basic only)
+       parentElement
+       children
+       nextElementSibling
