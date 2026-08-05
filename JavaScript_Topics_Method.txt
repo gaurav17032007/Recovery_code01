@@ -37,4 +37,28 @@ parentElement
 children
 nextElementSibling
 
-👉 Move between elements
+<========== Events ==========>
+
+1. Mouse Events
+   click
+   dblclick (double click)
+   mouseover
+   mouseout 
+
+2. Keyboard Events
+   keydown => Press 👇
+   keyup => Realese 👆
+
+3. Form Events
+   submit
+   input        
+   change
+   focus (It runs when an element focus in input)
+   blur (It runs when an element loses focus)
+   
+4. Window Events
+   load
+   scroll 
+   resize
+
+   

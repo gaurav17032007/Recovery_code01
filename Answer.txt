@@ -57,3 +57,37 @@ A8: DOM manipulation is the process of changing the content, structure, or style
        parentElement
        children
        nextElementSibling
+
+Q9: What is a Event ?
+A9: An event is something the user does, like clicking, typing, or moving the mouse. When an event happens,
+    JavaScript reacts to it.
+
+    1. Mouse Events
+       click
+       dblclick (double click)
+       mouseover
+       mouseout 
+
+    2. Keyboard Events
+       keydown => Press 👇
+       keyup => Realese 👆
+
+    3. Form Events
+       submit
+       input        
+       change
+       focus (It runs when an element focus in input)
+       blur (It runs when an element loses focus)
+   
+    4. Window Events
+       load
+       scroll 
+       resize
+
+Q10: What is a Module ?
+A10: A module is reusable code that can be imported and exported between different files. These are three type.
+     1. import 
+     2. Export
+
+Q11: What is a callbacks ?
+A11: A callback is a function that is passed as an argument to another function and is executed later.
