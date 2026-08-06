@@ -91,3 +91,8 @@ A10: A module is reusable code that can be imported and exported between differe
 
 Q11: What is a callbacks ?
 A11: A callback is a function that is passed as an argument to another function and is executed later.
+
+Q12: What is a Promises ?
+A12: A Promise is an object that represents the eventual success or failure of an asynchronous operation.
+     1. .then() runs when the Promise is successful (resolved)
+     2. .catch() runs when the Promise fails (rejected)
