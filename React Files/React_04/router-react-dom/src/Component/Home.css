@@ -1,0 +1,8 @@
+.Routes_id{
+    background-color: rgb(34, 207, 123);
+    height: 50px;
+    font-size: 30px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}

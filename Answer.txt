@@ -1,0 +1,98 @@
+Q1. What mean the interactive ?
+A1: Interactive means when a system responds to user actions like clicks, inputs, or events.
+
+Q2. What is a javascript ?
+A2: JavaScript is an object-oriented programming language that makes web pages interactive. It can be used for both frontend and backend development.
+
+Q3: What is let,const,var ?
+A3: let => let is a block-scoped variable. It can be updated and cannot redeclared in the same scope.
+    const => const is a also block-scoped variable. It cannot updated and can't redeclared in the same scope.
+    var => var is a function-scoped variable. It can be updated and redeclared in the same scope.
+
+Q4: What is a primitive and non-primitive ?
+A4: Primitive =>Primitive data type are immutable.meaning their value canont be changed.Javascript has the 7 types of primitive data type (Number,String,Boolen,Undefine,
+    Symbol,Null,Bigint).
+    Non-Primitive => Non-Primitive data type are be changed.Javascript has the three type of non-primitive (Object,Array,Function).
+
+Q5: What is a DataType and how many types of data ?
+A5: DataType mens which type of the value or data call the data type. Example("India is No.1 country",1,true). so means we are use the double quotes("") this is string type 
+    data and use the number so number type of data and use the true or false value this is call the boolen type of data. Javascript has the 7 type of data types (Number,String,
+    Boolen,Undefine,Symbol,Null,Bigint). 
+
+Q6: What is a Opreators ?
+A6: An operator is a symbol that performs operations on values, such as calculations, comparisons, and logical decisions and javascript has 7 types of opreators.  
+    1.Arithmetic 2.Assignment 3.Logical 4.Camparison 5.Ternary 6.Bitwise 7.TypeOprators
+
+Q7: What is a Functions and How many types of functions ?
+A7: A function is a reusable block of code used to perform a specific task. In JavaScript, common types include function declaration, function expression, arrow function, 
+    anonymous function, and callback function.
+
+Q8: What is DOM Manipulation ?
+A8: DOM manipulation is the process of changing the content, structure, or style of a web page using JavaScript.
+       I learned this topics =>>
+    1. Selecting Elements (Must know)
+       document.getElementById
+       document.querySelector
+       document.querySelectorAll
+
+    2. Changing Content
+       textContent
+       innerHTML
+
+    3. Changing Styles
+       element.style.color
+       element.style.backgroundColor
+       classList/add/remove/toggle
+       
+    4. Adding & Removing Elements
+        createElement
+        appendChild
+        remove()
+
+    5. Event Handling (very important)
+       addEventListener("click", ...)
+       input, submit
+
+    6. Traversing (basic only)
+       parentElement
+       children
+       nextElementSibling
+
+Q9: What is a Event ?
+A9: An event is something the user does, like clicking, typing, or moving the mouse. When an event happens,
+    JavaScript reacts to it.
+
+    1. Mouse Events
+       click
+       dblclick (double click)
+       mouseover
+       mouseout 
+
+    2. Keyboard Events
+       keydown => Press 👇
+       keyup => Realese 👆
+
+    3. Form Events
+       submit
+       input        
+       change
+       focus (It runs when an element focus in input)
+       blur (It runs when an element loses focus)
+   
+    4. Window Events
+       load
+       scroll 
+       resize
+
+Q10: What is a Module ?
+A10: A module is reusable code that can be imported and exported between different files. These are three type.
+     1. import 
+     2. Export
+
+Q11: What is a callbacks ?
+A11: A callback is a function that is passed as an argument to another function and is executed later.
+
+Q12: What is a Promises ?
+A12: A Promise is an object that represents the eventual success or failure of an asynchronous operation.
+     1. .then() runs when the Promise is successful (resolved)
+     2. .catch() runs when the Promise fails (rejected)

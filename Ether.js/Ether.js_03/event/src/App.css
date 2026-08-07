@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+}
+.Comp1{
+  background-color: rgba(13, 41, 135, 0.55);
+  color: black;
+  margin: 0;
+  padding:0;
+}
+.navbar{
+  background-color: rgb(107, 48, 203);
+  /* height: 60px; */
+  color: black;
+}
+.link{
+  color: black;
+  display: flex;
+ justify-content: space-between;
+ justify-content: center;
+}

@@ -1,0 +1,42 @@
+/* .container {
+  margin: 0px;
+  padding: 0px;
+} */
+.header {
+  text-align: center;
+  background-color: rgb(232, 232, 218);
+  padding:5px;
+}
+.Navigation {
+  background-color: blue;
+  display: flex;
+  cursor: pointer;
+  margin: 10px 40px;
+  /* padding: 10px; */
+}
+.Navigation ul,
+li {
+    margin:0px;
+    padding: 25px 15px;
+    list-style: none;
+}
+ul,
+li:hover{
+
+  background-color: white;
+  color: black;
+}   
+.Contain{
+    text-align: center;
+    display: flex;
+    margin:0px;
+}
+.Contain p{
+    padding: 20px 21%   ; 
+}
+.Contain h5{
+    background-color:rgb(200, 194, 194);
+    height: 25ch;
+    margin: 0px;
+    padding: 15px 15px;     
+}
