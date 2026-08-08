@@ -1,3 +1,4 @@
+				Javascript
 Q1. What mean the interactive ?
 A1: Interactive means when a system responds to user actions like clicks, inputs, or events.
 

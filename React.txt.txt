@@ -1,0 +1,9 @@
+					React.js
+Q1: What is a component ?
+A1: A component is a reusable piece of UI in React. It helps make the code more readable,clean, and easy to manage. We can use a component multiple times wherever needed in \
+    our application.
+
+Q2: What is a JSX ?
+A2: JSX looks like HTML, but it is not exactly HTML. React allows us to write JSX code inside JavaScript functions (components).JSX syntax and events are slightly different
+    from HTML and JavaScript. For example, we use className instead of class, and events like onClick and onChange are written in camelCase.JSX makes the code easier to 
+    manage, more readable, and cleaner.
