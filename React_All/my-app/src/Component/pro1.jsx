@@ -1,7 +1,9 @@
-function Welcome({a,b}){
-    
-    return(
-        <div>{a+b}</div>
+function Pro1() {
+
+    return (
+        <div>
+            <h1>Welcome to Home</h1>
+        </div>
     )
 }
-export default Welcome;
+export default Pro1;

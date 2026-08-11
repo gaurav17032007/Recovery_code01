@@ -1,12 +1,8 @@
-import { useContext } from "react";
-import { Mycontext } from "../App.js";
-function Pro(){
-    const {show,Input}=useContext(Mycontext);
+function Pro4(){
     return(
         <div>
-            <button onClick={Input}>Input</button>
-            <button onClick={show}>pro</button>
+            <h1>Welcome to Contact</h1>
         </div>
     )
 }
-export default Pro;
+export default Pro4;
