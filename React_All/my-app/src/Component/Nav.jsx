@@ -8,7 +8,7 @@ function Navbar() {
       <Link to="/service">Service</Link> |{" "}
       <Link to="/contact">Contact</Link>
     </nav>
-  );
+  ); 
 }
 
 export default Navbar;
