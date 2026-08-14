@@ -1,19 +1,18 @@
 import { useState } from "react";
-function Add_User() {
+
+function Add_User({setAdmin}) {
     const [name,setname]=useState("");
-    const handleApi=async (e) => {
+    const handleApi=(e)=>{
         e.preventDefault();
 
-        const userdata=({name:name});
-        const res=await fetch("https://jsonplaceholder.typicode.com/posts",{
-            method: "POST",
-            headers:{
-                 "Content-Type" : "application/json"
-            },
-            body: JSON.stringify(userdata)
-        })
-        const result=await res.json();
-        console.log(result); 
+        const newUser={
+            id:Date.now(),
+            name:name
+        }
+
+        setAdmin((prev)=>[...prev,newUser]); 
+
+        setname("");
     }
     return (
         <div>
