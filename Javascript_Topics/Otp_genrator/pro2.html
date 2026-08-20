@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<form id="myForm">
+    <input type="number" id="num" placeholder="Enter the number">
+    <button>Fill</button>
+</form>
+
+<body>
+    <script>
+        let form = document.getElementById("myForm");
+        let otp = Math.floor(Math.random() * 9999);
+        console.log(otp);
+        
+        form.addEventListener("submit", function check(e) {
+            e.preventDefault();
+            let input = document.getElementById("num").value;
+
+            if (otp === Number(input)) {
+                window.alert("run");
+            } else {
+                window.alert("failed");
+            }
+        })
+    </script>
+</body>
+
+</html>

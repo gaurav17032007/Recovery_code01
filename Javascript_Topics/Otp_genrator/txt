@@ -1,0 +1,20 @@
+// 1. OTP Generator + Verification System
+
+// 👉 Features:
+
+// Random 4/6 digit OTP generate
+// User input kare → match karo
+// 30 sec timer (OTP expire)
+// Resend OTP button
+
+// 👉 Logic:
+
+// Math.random()
+// Timer (setTimeout / setInterval)
+// Condition checking
+
+// let otp = Math.floor(1000 + Math.random() * 9000);
+// console.log(otp);
+
+// Math.floor()
+// 👉 Decimal hata deta hai (integer bana deta hai)
