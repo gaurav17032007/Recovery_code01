@@ -1,0 +1,24 @@
+🔹 Kya banega?
+
+User password type karega aur tum show karoge:
+
+Weak ❌
+Medium ⚠️
+Strong ✅
+🧠 Isme kya logic lagega?
+
+Tum check kar sakte ho:
+
+Length (>= 8)
+Uppercase letter (A-Z)
+Lowercase letter (a-z)
+Number (0-9)
+Special character (!@#$)
+
+🎨 UI Idea:
+Input box
+Niche text: “Password Strength: Weak/Medium/Strong”
+Color change:
+Red → Weak
+Yellow → Medium
+Green → Strong
