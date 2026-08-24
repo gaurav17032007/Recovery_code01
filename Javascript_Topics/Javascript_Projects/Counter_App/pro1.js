@@ -6,13 +6,13 @@ heading1.textContent = "Counter App";
 element.appendChild(heading1);
 
 let heading2 = document.createElement("h2");
-heading2.id="heading_2";
-heading2.innerText=0;
+heading2.id = "heading_2";
+heading2.innerText = 0;
 element.appendChild(heading2);
 
 let button1 = document.createElement("button");
 button1.textContent = "+";
-button1.addEventListener("click",increment);
+button1.addEventListener("click", increment);
 element.appendChild(button1);
 
 let button3 = document.createElement("button");
@@ -22,26 +22,32 @@ element.appendChild(button3);
 
 let button2 = document.createElement("button");
 button2.textContent = "--";
-button2.addEventListener("click",decrement);
+button2.addEventListener("click", decrement);
 element.appendChild(button2);
 
-let sum=1;
-let id=document.getElementById("heading_2");
-function increment(e){
+let sum = 0;
+let id = document.getElementById("heading_2");
+function increment(e) {
     e.preventDefault();
-    id.textContent=sum++;
-    if(sum>=10){
-        alert()
+    if(sum==10){
+        alert("enough");
+        return;
     }
+    sum++; 
+    id.textContent = sum;
 }
 
-function decrement(e){
+function decrement(e) {
     e.preventDefault();
-    // let id=document.getElementById("heading_2");
-    id.textContent=sum--;
-
+    if(sum==0){
+        return;
+    }
+    sum--; 
+    id.textContent = sum;
 }
 
-function reset(){
-
+function reset(e) {
+    e.preventDefault();
+    sum = 0; 
+    id.textContent = sum;
 }
