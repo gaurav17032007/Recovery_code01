@@ -51,6 +51,7 @@ border1.style.border = "2px solid black";
 border1.style.width = "70px";
 border1.style.height - "20vh";
 border1.style.textAlign = "center";
+border1.style.backgroundColor = "red";
 element2.appendChild(border1);
 
 let border2 = document.createElement("h5");
@@ -60,6 +61,7 @@ border2.style.width = "70px";
 border2.style.height - "20vh";
 border2.style.textAlign = "center";
 border2.style.marginLeft = "10px";
+border2.style.backgroundColor = "red";
 element2.appendChild(border2);
 
 let border3 = document.createElement("h5");
@@ -69,6 +71,7 @@ border3.style.width = "60px";
 border3.style.height - "20vh";
 border3.style.textAlign = "center";
 border3.style.marginLeft = "10px";
+border3.style.backgroundColor = "red";
 element2.appendChild(border3);
 
 let h5_element3 = document.createElement("h5");
@@ -80,33 +83,50 @@ form.appendChild(button_element);
 
 function handler(e) {
     e.preventDefault();
+    store;
     let input1 = document.getElementById("input_id1");
     let input2 = document.getElementById("input_id2");
 
-    if (input1.value.length < 4) {
+    if (input1.value.length >= 4) {
+        h5_element1.textContent = "";
+    } else {
         h5_element1.textContent = "invalid name";
         h5_element1.style.color = "red";
-    } else {
-        h5_element1.textContent = "";
     }
 
-    if (input2.value.length < 4 || !input2.value.includes("@") || !input2.value.includes(".com")) {
+    if (input2.value.length >= 4 && input2.value.includes("@") && input2.value.includes(".com")) {
+        h5_element2.textContent = "";
+    } else {
         h5_element2.textContent = "invalid email";
         h5_element2.style.color = "red";
-    } else {
-        h5_element2.textContent = "";
     }
-
-
-
 
 }
 let input3 = document.getElementById("input_id3");
-let hasUpper = /[A-Z]/.test(input3.value);
-let haslower = /[a-z]/.test(input3.value);
-let hasymbol = /[!@#$%^&*]/.test(input3.value);
-if (hasUpper) {
-    border1.style.backgroundColor = "red";
-}else{
-    border1.style.backgroundColor = "";
-}
+let store=input3.addEventListener("input", function () {
+    let input3 = document.getElementById("input_id3");
+    let hasUpper = /[A-Z]/.test(input3.value);
+    let haslower = /[a-z]/.test(input3.value);
+    let hasymbol = /[!@#$%^&*]/.test(input3.value);
+
+    // border1.style.backgroundColor = hasUpper ? "green" : "red";
+    let value = input3.value;
+    if (value.length > 4 && hasUpper) {
+        border1.style.backgroundColor = "green";
+    } else {
+        border1.style.backgroundColor = "red";
+    }
+
+    if (haslower) {
+        border2.style.backgroundColor = "green";
+    } else {
+        border2.style.backgroundColor = "red";
+    }
+
+    if (hasymbol) {
+        border3.style.backgroundColor = "green";
+    } else {
+        border3.style.backgroundColor = "red";
+    }
+
+})
