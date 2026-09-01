@@ -1,13 +1,18 @@
-import Input_Api from "./Component/Location_Weather";
-import Hourly_Weather from "./Component/Hourly_Weather.";
+import './App.css';
+import InputApi from "./Component/Location_Weather";
+import HourlyWeather from "./Component/Hourly_Weather.";
+import Location from "./Component/Current_location";
+import User from "./Component/Form_Validation";
 import { useState } from "react";
 function App() {
 
   const [count,setcount]=useState("");
   return (
-    <div>
-      <Input_Api />
-      <Hourly_Weather />
+    <div className="App">
+      <Location/>
+      <InputApi setcount={setcount}/>
+      <HourlyWeather count={count}/>
+      <User/>
     </div>
   )
 }

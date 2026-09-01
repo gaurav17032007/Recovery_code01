@@ -1,0 +1,31 @@
+.div_class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_class {
+    border: 2px solid black;
+    border-radius: 40px;
+    width: 30%;
+    height: 40vh;
+}
+
+.form_class input {
+    width: 80%;
+    height: 5vh;
+    align-items: center;
+    margin-left: 40px;
+    margin-top: 40px;
+    /* margi */
+    /* margin: 20px; */
+}
+
+.form_class button {
+    width: 82%;
+    height: 5vh;
+    margin-left: 40px;
+    margin-top: 40px;
+    /* align-items: center; */
+}
+

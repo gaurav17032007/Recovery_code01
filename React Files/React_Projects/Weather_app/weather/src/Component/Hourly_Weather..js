@@ -1,23 +1,39 @@
-import { useState } from "react";
-function Hourly_Weather(){
+import { useEffect, useState } from "react";
+function Hourly_Weather({ count }) {
 
-    const [time,settime] = useState(0);
+    const [time, settime] = useState(null);
 
-    const getHoureData=async () => {
-        const apikey="250a771d8ac5e120e7b19c92e4f80b0a";
-        const url=`https://pro.openweathermap.org/data/2.5/forecast/hourly?q=${}&appid=${apikey}&units=metric`
-        const response=await fetch(apikey,{
-            method:'GET'
-        })
-        
-        const result =await response.json();
+useEffect(() => {
+    const getHoureData = async () => {
+    if (!count) return;
+    try {
+        const apikey = "250a771d8ac5e120e7b19c92e4f80b0a";
+        const url = `https://api.openweathermap.org/data/2.5/forecast?q=${count}&appid=${apikey}&units=metric`;
+        const response = await fetch(url, {
+            method: 'GET'
+            })
+
+        const result = await response.json();
         settime(result);
-        console.log(result);
+            console.log(result);
+    }catch (err) {
+            console.error(err);
+        }
     }
-    return(
+
+        getHoureData();
+}, [count]);
+
+    return (
         <div>
-            <h1>{time}</h1>
+            {time?.list?.map((item, index) => (
+            <div key={index}>
+                <p>{item.dt_txt}</p>
+                <p>{item.main.temp}°C</p>
+                <p>{item.weather[0].description}</p>
+            </div>
+            ))}
         </div>
     )
 }
-export default Hourly_Weather;
+export default Hourly_Weather;   
