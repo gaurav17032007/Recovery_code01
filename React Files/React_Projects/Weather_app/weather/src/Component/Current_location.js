@@ -4,6 +4,7 @@ import myImg from "../Images/morning.png";
 import myImg1 from "../Images/evening.png";
 import myImg2 from "../Images/night.png";
 import myImg3 from "../Images/afternoon.png";
+import myImg4 from "../Images/Map.png";
 function Location() {
 
     const [state, setstate] = useState("");
@@ -45,12 +46,14 @@ function Location() {
     }, [])
     return (
         <div className="location">
-            <div className="location_img">
+            <div className="location_img desktop_only">
                 <img src={image} alt="time" width="50" />
                 <h3>{time}</h3>
             </div>
-            <h4>React Frontend Developer</h4>
-            <h4>{state}</h4>
+            <img src={myImg4} alt="time" className="mobile_only" />
+            <h4 className="mobile_only">{state}</h4>
+            <h4 className="desktop_only">React Frontend Developer</h4>
+            <h4 className="desktop_only">{state}</h4>
         </div>
     )
 }

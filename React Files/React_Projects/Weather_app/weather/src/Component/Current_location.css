@@ -1,14 +1,13 @@
 .location {
     border: 2px solid black;
     padding: 10px;
-    max-width: 350px;
+    width: 100%;
+    max-width:400px;
     
 }
 
 .location_img {
     display: flex;
-    /* align-items: /center; */
-    /* gap: 10px;   */
 }
 
 .location h3 {
@@ -17,4 +16,20 @@
 
 .location h4 {
     margin: 5px 0;
+}
+
+.mobile_only {
+    display: block;
+}
+.desktop_only {
+    display: none;
+}
+@media(min-width:768px){
+    .mobile_only {
+        display: none;
+    }
+    .desktop_only {
+        display: block;
+    }
+    
 }
