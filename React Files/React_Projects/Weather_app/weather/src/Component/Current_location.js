@@ -27,31 +27,51 @@ function Location() {
             setTime("Good Night");
             setImage(myImg2);
         }
-        console.log(date.toLocaleTimeString());
     }, []);
 
 
     useEffect(() => {
-        navigator.geolocation.getCurrentPosition(async (res) => {
-            let lat = res.coords.latitude;
-            let lon = res.coords.longitude
 
-            let url = await fetch(`https://nominatim.openstreetmap.org/reverse?lat=${lat}&lon=${lon}&format=json`);
+        navigator.geolocation.getCurrentPosition(
+            async (position) => {
+                try {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
 
-            const result = await url.json();
-            setstate(result.address.state);
-            console.log(result.address.state);
-        }
-        )
-    }, [])
+                    const res = await fetch(
+                        `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lon}`
+                    );
+
+                    const result = await res.json();
+                    setstate(result.principalSubdivision);
+
+                } catch (err) {
+                    console.log("Fetch error:", err);
+                }
+            },
+
+            (error) => {
+                console.log("Current_Location error:", error);
+            },
+
+            {
+                enableHighAccuracy: true,
+                timeout: 5000,
+                maximumAge: 0
+            }
+        );
+
+    }, []);
     return (
         <div className="location">
             <div className="location_img desktop_only">
-                <img src={image} alt="time" width="50" />
+                <img src={image || null} alt="time" width="50" />
                 <h3>{time}</h3>
             </div>
-            <img src={myImg4} alt="time" className="mobile_only" />
-            <h4 className="mobile_only">{state}</h4>
+            <div className="State_location">
+                <img src={myImg4} alt="time" />
+                <h4 className="mobile_only">{state}</h4>
+            </div>
             <h4 className="desktop_only">React Frontend Developer</h4>
             <h4 className="desktop_only">{state}</h4>
         </div>

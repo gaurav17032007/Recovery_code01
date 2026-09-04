@@ -1,0 +1,119 @@
+.Input_Location {
+    /* border: 2px solid black; */
+    width: 100%;
+    max-width: 390px;
+    padding: 10px;
+    box-sizing: border-box;
+    /* border-radius: 10px; */
+}
+
+.search_location {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.search_location input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.search_location button {
+    /* width:70%; */
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0px 0 0 5px;
+}
+
+.weather_data {
+    box-sizing: border-box;
+    margin: 10px 0 0 0;
+    /* padding: 10px; */
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #1e1e2f;
+}
+
+/* 📦 Main box */
+.box1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e1e2f;
+    padding: 20px;
+    border-radius: 12px;
+    color: white;
+    max-width: 350px;
+    margin: 10px;
+    box-shadow: 0 0px 3px rgb(255, 255, 255);
+}
+
+/* 🌤 Left side (icon + temp) */
+.weather_icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather_icon img {
+    width: 80px;
+}
+
+.weather_icon h2 {
+    font-size: 28px;
+    margin-top: 5px;
+}
+
+/* 📄 Right side (description) */
+.weather_description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.weather_description h3 {
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.weather_description h4 {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.box2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 20px;
+}
+
+/* 👉 Common style */
+.weather_humidity,
+.wind_speed,
+.weather_visibility,
+.weather_pressure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* 🔥 center vertically */
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: 0 0px 3px rgb(255, 255, 255);
+
+    min-height: 90px;
+    transition: 0.2s;
+    background: #1e1e2f;
+}
+
+.box2 h4,
+h5 {
+    font-size: 20px;
+    color: white;
+}

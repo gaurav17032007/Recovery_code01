@@ -1,35 +1,52 @@
 .location {
-    border: 2px solid black;
-    padding: 10px;
     width: 100%;
-    max-width:400px;
-    
+    max-width: 390px;
+    padding: 10px;
+    box-sizing: border-box;
+
 }
 
 .location_img {
     display: flex;
 }
+.location h3{
+    color: white;
+    /* display: flex; */
+}
 
 .location h3 {
-    margin: 15px 0px 0px 10px ;
+    margin: 15px 0px 0px 10px;
 }
 
 .location h4 {
     margin: 5px 0;
 }
 
+.State_location {
+    color: white;
+    border: 1px solid black;
+     background: #1e1e2f;
+    border-radius: 20px;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
 .mobile_only {
     display: block;
 }
+
 .desktop_only {
     display: none;
 }
-@media(min-width:768px){
+
+@media(min-width:768px) {
     .mobile_only {
         display: none;
     }
+
     .desktop_only {
         display: block;
     }
-    
+
 }

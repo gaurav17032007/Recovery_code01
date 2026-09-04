@@ -1,0 +1,45 @@
+/* 📦 Parent container */
+.hourly_container {
+  display: flex;
+  overflow-x: auto;   /* 👉 horizontal scroll */
+  gap: 12px;
+  padding: 10px;
+  margin: 10px;
+}
+
+/* 🔲 Each card */
+.hourly_card {
+  min-width: 120px;
+  background: #1e1e2f;
+  color: white;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+  flex-shrink: 0;  /* 🔥 important for scroll */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* 🕒 Time */
+.hourly_card p:first-child {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* 🌡 Temp */
+.hourly_card p:nth-child(2) {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+/* 🌦 Description */
+.hourly_card p:last-child {
+  font-size: 13px;
+  text-transform: capitalize;
+  opacity: 0.9;
+}
+
+/* 📱 Scrollbar hide (optional) */
+.hourly_container::-webkit-scrollbar {
+  display: none;
+}
