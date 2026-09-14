@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Hourly_weather.css";
-function Hourly_Weather({ count }) {
+function Day_weather({ count }) {
 
     const [time, settime] = useState(null);
 
@@ -23,13 +23,16 @@ function Hourly_Weather({ count }) {
         }
 
         getHoureData();
-    }, [count]);
+    }, [count]);    
 
     return (
         <div className="hourly_container">
             {time?.list?.map((item, index) => (
                 <div className="hourly_card" key={index}>
-                    <p>{item.dt_txt}</p>
+                    <h3>5 Day Forecast
+                        
+                    </h3>
+                    <p>{new Date(item.dt_txt).toLocaleTimeString()}</p>
                     <p>{Math.round(item.main.temp)}°C</p>
                     <p>{item.weather[0].description}</p>
                 </div>
@@ -37,4 +40,4 @@ function Hourly_Weather({ count }) {
         </div>
     )
 }
-export default Hourly_Weather;   
+export default Day_weather;   

@@ -1,52 +1,119 @@
 .location {
-    width: 100%;
-    max-width: 390px;
-    padding: 10px;
+    max-width: 420px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    color: white;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     box-sizing: border-box;
-
 }
 
+/* 🌅 Time section */
 .location_img {
     display: flex;
-}
-.location h3{
-    color: white;
-    /* display: flex; */
-}
-
-.location h3 {
-    margin: 15px 0px 0px 10px;
-}
-
-.location h4 {
-    margin: 5px 0;
-}
-
-.State_location {
-    color: white;
-    border: 1px solid black;
-     background: #1e1e2f;
-    border-radius: 20px;
-    display: flex;
-    gap: 5px;
     justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
 }
 
-.mobile_only {
+.location_img img {
+    width: 50px;
+}
+
+.location_img h3 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* 📍 Location section */
+.State_location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px;
+    border-radius: 20px;
+
+    /* 💎 Gradient + Glass */
+    background: linear-gradient(135deg, #1e3c5a, #27496d);
+    backdrop-filter: blur(10px);
+
+    /* ✨ Shadow for depth */
+    box-shadow: 
+        inset 0 1px 1px rgba(255,255,255,0.1),
+        0 8px 20px rgba(0,0,0,0.4);
+
+    /* color: #fff;
+    transition: 0.3s ease; */
+}
+
+/* 📍 Icon */
+.State_location img {
+    width: 18px;
+    opacity: 0.9;
+}
+
+/* 📍 Text */
+.State_location h4 {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+🔥 Hover effect
+.State_location:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.4);
+}
+/* 👨‍💻 Role text */
+.location h4 {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* 🔥 Hover effect */
+.location:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.4);
+}
+
+/* 📱 Mobile */
+@media (max-width: 480px) {
+    .location {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .location_img h3 {
+        font-size: 16px;
+    }
+
+    .State_location h4 {
+        font-size: 14px;
+    }
+}
+
+/* 👇 Utility classes */
+.desktop_only {
     display: block;
 }
 
-.desktop_only {
+.mobile_only {
     display: none;
 }
 
-@media(min-width:768px) {
-    .mobile_only {
+@media (max-width: 768px) {
+    .desktop_only {
         display: none;
     }
 
-    .desktop_only {
+    .mobile_only {
         display: block;
     }
-
 }
