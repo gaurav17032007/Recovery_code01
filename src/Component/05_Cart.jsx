@@ -1,3 +1,4 @@
+import '../Css_files/05_Cart.css'; 
 function Cart(){
     return(
         <div>

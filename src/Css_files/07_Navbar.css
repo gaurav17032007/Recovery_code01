@@ -1,0 +1,56 @@
+.Nav_div {
+    /* display: flex; */
+    margin: 20px auto;
+    border: 2px solid black;
+    width: 100%;
+    max-width: 1400px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.Nav_link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 20px; */
+}
+
+.img_span{
+    display: flex;
+    align-items: center;
+}
+.Home_plus {
+    display: flex;
+    gap: 20px;   
+}
+
+.Nav_input {
+    /* flex: 1; */
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+.Wishlist_plus {
+    display: flex;
+    gap: 20px;
+}
+
+
+/*
+.img_span span{
+    align-items: center;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.Ease{
+    color: #f4a905;
+}
+
+
+.Nav_div a{
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+}
+     */

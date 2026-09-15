@@ -1,3 +1,4 @@
+import '../Css_files/03_Categories.css'; 
 function Categories(){
     return(
         <div>

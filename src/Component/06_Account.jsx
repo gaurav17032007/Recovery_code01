@@ -1,3 +1,4 @@
+import '../Css_files/06_Account.css'; 
 function Account(){
     return(
         <div>
