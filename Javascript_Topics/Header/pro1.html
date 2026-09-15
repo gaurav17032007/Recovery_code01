@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Nav_div {
+            width: 100%;
+            max-width: 1400px;
+            margin: 20px auto;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px 20px;
+            box-sizing: border-box;
+        }
+        .logo{
+            /* display: flex; */
+            /* gap: 20px; */
+            /* flex: 1; */
+        }
+        .Nav_link {
+            flex: 1;
+            /* margin: 20px auto; */
+            padding: 10px;
+            border: 2px solid red;
+            display: flex;
+            gap: 20px;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .Home_plus {
+            /* flex: 1; */
+            flex: 1;
+            display: flex;
+            gap: 20px;
+        }
+        .Nav_input{
+            flex: 1;
+            /* flex: 2; */
+        }
+        .Wishlist_plus {
+            flex: 1;
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Nav_div">
+        <nav class="Nav_link">
+            <div class="logo">
+                <h4>LogoName</h4>
+            </div>
+            <div class="Home_plus">
+                <h3>Home</h3>
+                <h3>Categories</h3>
+            </div>
+            <div class="Nav_input">
+                <input type="text">
+                <button>Search</button>
+            </div>
+            <div class="Wishlist_plus">
+                <h3>Wishlist</h3>
+                <h3>Cart</h3>
+                <h3>Account</h3>
+            </div>
+        </nav>
+    </div>
+</body>
+
+</html>
