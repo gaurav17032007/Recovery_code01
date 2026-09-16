@@ -1,56 +1,125 @@
 .Nav_div {
-    /* display: flex; */
     margin: 20px auto;
-    border: 2px solid black;
     width: 100%;
     max-width: 1400px;
-    padding: 0px 10px;
+    padding: 10px 10px;
     box-sizing: border-box;
+    border: 1px solid #f5f7fa;
+    border-radius: 15px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
+    background-color: white;
 }
 
 .Nav_link {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    /* gap: 20px; */
-}
-
-.img_span{
-    display: flex;
-    align-items: center;
-}
-.Home_plus {
-    display: flex;
-    gap: 20px;   
-}
-
-.Nav_input {
-    /* flex: 1; */
-    display: flex;
-    width: 50%;
-    justify-content: center;
-}
-.Wishlist_plus {
-    display: flex;
     gap: 20px;
 }
 
-
-/*
-.img_span span{
-    align-items: center;
-    font-size: 22px;
-    font-family: 'Times New Roman', Times, serif;
+.Nav_link a {
+    color: black;
 }
-.Ease{
+
+.img_span {
+    display: flex;
+    align-items: center;
+}
+
+.img_span span {
+    font-size: 26px;
+    font-family: 'Playfair Display', serif;
+}
+
+.Shop {
+    color: #1e3a8a;
+}
+.Ease {
     color: #f4a905;
 }
 
-
-.Nav_div a{
-    text-decoration: none;
-    font-weight: bold;
+.Home_plus {
+    flex: 1;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
-     */
+
+.Home_plus a {
+    display: flex;
+    width: 50%;
+    text-decoration: none;
+    justify-content: space-evenly;
+}
+
+.Nav_input {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+}
+
+.Nav_input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    border: 2px solid #ccc;
+    border-right: 2px solid #f4a905;
+    font-size: 15px;
+}
+
+.Nav_input input,
+:focus {
+    outline: none;
+}
+
+.Nav_input button {
+    padding: 10px;
+    width: 20%;
+    border-radius: 0 10px 10px 0;
+    border: 0px solid #ccc;
+    cursor: pointer;
+    background-color: #f4a905;
+}
+
+.Home_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+
+.Home_img img {
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0 0 6px;
+}
+
+.Home_img a {
+    flex-direction: column;
+    font-size: 13px;
+    /* align-items: center; */
+}
+
+.Wishlist_plus {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.Wishlist_plus a {
+    display: flex;
+    width: 20%;
+    text-decoration: none;
+    justify-content: space-evenly;
+}
+/* .Cart_img{
+    display: flex;
+    align-items: center;
+    width: 30%;
+}
+.Cart_img img{
+    display: flex;
+    width: 30px;   
+} */
