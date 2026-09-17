@@ -4,10 +4,9 @@ import image1 from '../images/logo.png';
 import image2 from '../images/Home.png';
 import image3 from '../images/Cart.png';
 import image4 from '../images/Wishlist.png';
+import image5 from '../images/Account.png';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Wish_list from './04_Wishlist';
-// import Account_img from '../images/Account.png';
 function Navbar({ setvalue }) {
     const [val, setval] = useState("");
     const navigate = useNavigate();
@@ -17,8 +16,6 @@ function Navbar({ setvalue }) {
         console.log("run");
         navigate("/product_list");
     }
-    // useEffect(()=>{
-    // },setvalue);
     return (
         <div className='Nav_div'>
             <nav className='Nav_link'>
@@ -27,15 +24,18 @@ function Navbar({ setvalue }) {
                     <span className='Shop'>Shop<span className='Ease'>Ease</span></span>
                 </div>
 
-                <div className='Home_plus'>
+                <div className="nav_links">
+                    <Link to="/" className="nav_item">
+                        <img src={image2} alt="home icon" />
+                        <span>Home</span>
+                    </Link>
 
-                    <div className='Home_img'>
-                        <Link to='/'>
-                            <img src={image2} alt="Home logo" />Home
-                        </Link>
-                    </div>
+                    <select className='nav_option' >
+                        <option selected disabled>Category</option>
+                        <option>Men</option>
+                        <option>Women</option>
+                    </select>
 
-                    <Link to='/categories'>Categories</Link>
                 </div>
 
                 <div className='Nav_input'>
@@ -49,21 +49,26 @@ function Navbar({ setvalue }) {
                 </div>
 
                 <div className='Wishlist_plus'>
-
-                    <Link to='/wish_list'>
-                        <img src={image4} alt="" />
-                        Wishlist
-                    </Link>
+                    <div className='Heart'>
+                        <img src={image4} type='checkbox' alt="" />
+                        <span>Wishlist</span>
+                    </div>
 
                     <div className='Cart_img'>
 
                         <Link to='/cart'>
-                            <img src={image3} alt="" />Cart
+                            <img src={image3} alt="" />
+                            <span>Cart</span>
                         </Link>
 
                     </div>
 
-                    <Link to='/account'>Account</Link>
+                    <div className='Account'>
+                        <Link to='/account'>
+                            <img src={image5} alt="" />
+                            <span>Account</span>
+                        </Link>
+                    </div>
                 </div>
                 {/* <img src={Account_img} alt="" /> */}
             </nav>

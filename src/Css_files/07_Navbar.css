@@ -1,5 +1,5 @@
 .Nav_div {
-    margin: 20px auto;
+    margin: 15px auto;
     width: 100%;
     max-width: 1400px;
     padding: 10px 10px;
@@ -9,6 +9,8 @@
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
     background-color: white;
+    position: sticky;
+    top: 0;
 }
 
 .Nav_link {
@@ -34,26 +36,13 @@
 .Shop {
     color: #1e3a8a;
 }
+
 .Ease {
     color: #f4a905;
 }
 
-.Home_plus {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.Home_plus a {
-    display: flex;
-    width: 50%;
-    text-decoration: none;
-    justify-content: space-evenly;
-}
-
 .Nav_input {
-    flex: 2;
+    flex:2;
     display: flex;
     flex-direction: row;
 }
@@ -67,8 +56,7 @@
     font-size: 15px;
 }
 
-.Nav_input input,
-:focus {
+.Nav_input input:focus {
     outline: none;
 }
 
@@ -81,45 +69,89 @@
     background-color: #f4a905;
 }
 
-.Home_img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30%;
-}
-
-.Home_img img {
-    width: 30px;
-    justify-content: center;
-    align-items: center;
-    margin: 10px 0 0 6px;
-}
-
-.Home_img a {
-    flex-direction: column;
-    font-size: 13px;
-    /* align-items: center; */
-}
-
 .Wishlist_plus {
     flex: 1;
     display: flex;
     justify-content: center;
     gap: 20px;
+    width: 100%;
+    height: 7vh;
+    font-size: 15px;
 }
 
 .Wishlist_plus a {
     display: flex;
-    width: 20%;
     text-decoration: none;
     justify-content: space-evenly;
+    flex-direction: column;
 }
-/* .Cart_img{
+
+.Heart {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+
+.Heart img {
+    width: 30px;
+    height: 4vh;
+}
+
+.Cart_img {
     display: flex;
     align-items: center;
     width: 30%;
+    justify-content: center;
+    font-size: 15px;
 }
-.Cart_img img{
+
+.Cart_img img {
     display: flex;
-    width: 30px;   
-} */
+}
+
+.Account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Account img {
+    display: flex;
+    width: 30px;
+    height: 4vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 10px;
+}
+
+.nav_links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav_item {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  text-decoration: none;
+  color: black;
+  font-weight: bolder;
+}
+
+.nav_item img {
+  width: 30px;
+}
+.nav_option {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-size: 14px;
+  cursor: pointer;
+}
+.nav_option:focus {
+  outline: none;
+  border-color: #1e3a8a;
+  box-shadow: 0 0 5px rgba(30, 58, 138, 0.3);
+}

@@ -18,8 +18,8 @@ function Home() {
                         <div key={index.id}>
                             <p>{index.id}</p>
                             <p>{index.category}</p>
-                            {/* {<img src={index.images[0]} alt="" />}
-                            {<img src={index.thumbnail} alt="" />} */}
+                            {/* {<img src={index.images[0]} alt="" />} */}
+                            {<img src={index.thumbnail} alt="" />}
                         </div>
                     )
                 })
