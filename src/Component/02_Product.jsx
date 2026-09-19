@@ -38,4 +38,4 @@ function Product_list({ value }) {
         </div>
     )
 }
-export default Product_list;
+export default Product_list;    

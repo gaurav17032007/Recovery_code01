@@ -6,6 +6,7 @@ import Wishlist from './Component/04_Wishlist';
 import Cart from './Component/05_Cart';
 import Account from './Component/06_Account';
 import Navbar from './Component/07_Navbar';
+import Product_item from './Component/Product_item';
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import { useState } from 'react';
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path='/wish_list' element={<Wishlist />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/account' element={<Account />} />
+          <Route path='/Product_item' element={<Product_item/>} />
         </Routes>
       </BrowserRouter>
       {/* <Categories/> */}

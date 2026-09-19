@@ -1,5 +1,6 @@
 .Nav_div {
     margin: 15px auto;
+    margin-bottom: auto;
     width: 100%;
     max-width: 1400px;
     padding: 10px 10px;
@@ -9,8 +10,8 @@
     box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
     flex-wrap: wrap;
     background-color: white;
-    position: sticky;
-    top: 0;
+    /* position: sticky;
+    top: 0; */
 }
 
 .Nav_link {
@@ -42,7 +43,7 @@
 }
 
 .Nav_input {
-    flex:2;
+    flex: 2;
     display: flex;
     flex-direction: row;
 }
@@ -127,31 +128,61 @@
 }
 
 .nav_links {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 .nav_item {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  text-decoration: none;
-  color: black;
-  font-weight: bolder;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
 }
 
 .nav_item img {
-  width: 30px;
+    width: 30px;
 }
+
 .nav_option {
-  padding: 8px 12px;
-  border-radius: 8px;
-  border: 2px solid #ccc;
-  font-size: 14px;
-  cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 2px solid #ccc;
+    font-size: 14px;
+    cursor: pointer;
 }
+
 .nav_option:focus {
-  outline: none;
-  border-color: #1e3a8a;
-  box-shadow: 0 0 5px rgba(30, 58, 138, 0.3);
+    outline: none;
+    border-color: #1e3a8a;
+    box-shadow: 0 0 5px rgba(30, 58, 138, 0.3);
+}
+
+.Categories {
+    display:flex;
+    margin: 15px auto;
+    margin-top: 3px;
+    width: 100%;
+    max-width: 1400px;
+    box-sizing: border-box;
+    /* border: 1px solid #f5f7fa; */
+    border-radius: 15px;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+.Categories span{
+    padding: 10px 10px;
+    display:flex;
+    flex: 1;
+    justify-content:center;
+    cursor: pointer;
+}
+.Categories span:hover{
+    /* margin: 0;
+    padding: 0; */
+    /* width: 100%; */
+    border-radius: 10px;
+    /* height: 30px; */
+    background-color: #f4a905;
 }

@@ -17,62 +17,74 @@ function Navbar({ setvalue }) {
         navigate("/product_list");
     }
     return (
-        <div className='Nav_div'>
-            <nav className='Nav_link'>
-                <div className='img_span'>
-                    <img src={image1} alt="ShopEase logo" />
-                    <span className='Shop'>Shop<span className='Ease'>Ease</span></span>
-                </div>
+        <div>
 
-                <div className="nav_links">
-                    <Link to="/" className="nav_item">
-                        <img src={image2} alt="home icon" />
-                        <span>Home</span>
-                    </Link>
-
-                    <select className='nav_option' >
-                        <option selected disabled>Category</option>
-                        <option>Men</option>
-                        <option>Women</option>
-                    </select>
-
-                </div>
-
-                <div className='Nav_input'>
-
-                    <input type="text"
-                        placeholder='🔍 Search for products, brands and more...'
-                        value={val}
-                        onChange={(e) => setval(e.target.value)}
-                    />
-                    <button onSubmit={handler}>Search</button>
-                </div>
-
-                <div className='Wishlist_plus'>
-                    <div className='Heart'>
-                        <img src={image4} type='checkbox' alt="" />
-                        <span>Wishlist</span>
+            <div className='Nav_div'>
+                <nav className='Nav_link'>
+                    <div className='img_span'>
+                        <img src={image1} alt="ShopEase logo" />
+                        <span className='Shop'>Shop<span className='Ease'>Ease</span></span>
                     </div>
 
-                    <div className='Cart_img'>
-
-                        <Link to='/cart'>
-                            <img src={image3} alt="" />
-                            <span>Cart</span>
+                    <div className="nav_links">
+                        <Link to="/" className="nav_item">
+                            <img src={image2} alt="home icon" />
+                            <span>Home</span>
                         </Link>
 
+                        <select className='nav_option'>
+                            <option disabled>Category</option>
+                            <option>Men</option>
+                            <option>Women</option>
+                        </select>
+
                     </div>
 
-                    <div className='Account'>
-                        <Link to='/account'>
-                            <img src={image5} alt="" />
-                            <span>Account</span>
-                        </Link>
+                    <div className='Nav_input'>
+
+                        <input type="text"
+                            placeholder='🔍 Search for products, brands and more...'
+                            value={val}
+                            onChange={(e) => setval(e.target.value)}
+                        />
+                        <button onClick={handler}>Search</button>
                     </div>
-                </div>
-                {/* <img src={Account_img} alt="" /> */}
-            </nav>
-        </div >
+
+                    <div className='Wishlist_plus'>
+                        <div className='Heart'>
+                            <img src={image4} type='checkbox' alt="" />
+                            <span>Wishlist</span>
+                        </div>
+
+                        <div className='Cart_img'>
+
+                            <Link to='/cart'>
+                                <img src={image3} alt="" />
+                                <span>Cart</span>
+                            </Link>
+
+                        </div>
+
+                        <div className='Account'>
+                            <Link to='/account'>
+                                <img src={image5} alt="" />
+                                <span>Account</span>
+                            </Link>
+                        </div>
+                    </div>
+                    {/* <img src={Account_img} alt="" /> */}
+                </nav>
+            </div >
+            <div className='Categories'>
+                <span>📱 Electronics</span>
+                <span>👕 Fashion</span>
+                <span>👟 Shoes</span>
+                <span>👜 Bags</span>
+                <span>💄 Beauty</span>
+                <span>🏠 Home & Kitchen</span>
+                <span>🚗 Automotive</span>
+            </div>
+        </div>
     )
 }
 export default Navbar;
