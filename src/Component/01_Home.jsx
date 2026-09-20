@@ -20,10 +20,12 @@ function Home() {
     return (
         <div>
             <h1>Home page</h1>
-            {
-                product?.filter((index) =>index.images[0] )
-            }
-            {product?.filter((index) =>
+            {product?.slice(10, 14).map((item) => (
+                <img src={item.images?.[0]} alt="" />
+            ))}
+
+
+            {/* {product?.filter((index) =>
                 index.tags[0] !== "meat"
                 && index.tags[0] !== "seafood")
                 .map((index) =>
@@ -32,7 +34,7 @@ function Home() {
                         <p>{index.category}</p>
                         <img src={index.thumbnail} alt="" onClick={handler} />
                     </div>
-                )}
+                )} */}
 
         </div>
     )
