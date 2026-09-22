@@ -2,9 +2,17 @@ import '../Css_files/01_Home.css';
 import getproduct from '../Product_Api/Product_api';
 import { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import img1 from '../images/Bags.jpg';
+import img2 from '../images/Earing.jpg';
+import img3 from '../images/Shoe.jpg';
+import img4 from '../images/T-shirts.jpg';
+import img5 from '../images/Washing_machine.jpg';
+import img6 from '../images/Watch.jpg';
+
 function Home() {
     const [product, setprodeuct] = useState(null);
     const [Index, setIndex] = useState(0);
+    // const [Index1, setIndex1] = useState(1);
     const navigator = useNavigate();
     useEffect(() => {
         const call = async function () {
@@ -19,14 +27,19 @@ function Home() {
         navigator('/Product_item');
     }
 
-    const images_slice = product?.slice(10, 15) || [];
-    const images_list = images_slice.map((item) => item.images[0]);
-    const images_list1= images_list.map((item)=> [item.images,item.images,item.images])
+    const images_list = [
+        img1,
+        img2,
+        img3,
+        img4,
+        img5,
+        img6
+    ]
     function left(e) {
         e.preventDefault();
         let newIndex = Index - 1;
         if (newIndex < 0) {
-            newIndex = images_list1.length - 1;
+            newIndex = images_list.length - 1;
         }
         setIndex(newIndex);
     }
@@ -34,25 +47,26 @@ function Home() {
     function right(e) {
         e.preventDefault();
         let newIndex = Index + 1;
-        if (newIndex >= images_list1.length) {
-            newIndex = 0;
+        if (newIndex >= images_list.length) {
+            newIndex = 0;  
         }
         setIndex(newIndex);
     }
     return (
         <div>
             <div className=''>
-                <button onClick={left}>{"<"}</button>
-                <img src={images_list1[Index]} width="200" alt="product" />
-                <button onClick={right}>{">"}</button>
+                <button onClick={left}>left</button>
+                <img src={images_list[Index]} width="200" alt="img1_product" />
+                <img src={images_list[(Index+1)%images_list.length]} width="200" alt="img2_product" />
+                <button onClick={right}>right</button>
             </div>
             {product?.slice(10, 14).map((item) => {
                 <img src={item.images?.[0]} alt="" />
             })
             }
 
-
-            {/* {product?.filter((index) =>
+            {/* 
+            {product?.filter((index) =>
                 index.tags[0] !== "meat"
                 && index.tags[0] !== "seafood")
                 .map((index) =>
