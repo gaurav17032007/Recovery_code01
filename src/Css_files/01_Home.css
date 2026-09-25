@@ -1,6 +1,5 @@
 .Slider_img {
-    margin: 10px auto;
-    /* border: 2px solid black; */
+    margin: 15px auto;
     width: 100%;
     max-width: 1400px;
     align-items: center;
@@ -41,3 +40,32 @@
     border-radius: 10%;
 }
 
+.container {
+    width: 100%;
+    max-width: 1400px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 15px auto;
+}
+
+.single_box {
+    width: 50%;
+    border: 1px solid #f5f7fa;
+    background-color: #f8fcff;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10%;
+    font-weight: bold;
+}
+
+.single_box p {
+    margin: 0;
+    padding: 0;
+    font-family: "Georgia", serif;
+    width: 300px;
+}
+
+.value {
+
+}

@@ -18,6 +18,7 @@ import img11 from '../images/Boat.png';
 function Home() {
     const [product, setprodeuct] = useState(null);
     const [Index, setIndex] = useState(0);
+    const [SingleProduct, SetSingalProduct] = useState([]);
     // const [Index1, setIndex1] = useState(1);
     const navigator = useNavigate();
     useEffect(() => {
@@ -55,13 +56,19 @@ function Home() {
         }
         setIndex(newIndex);
     }
-    let result = [];
-    for (let i = 0; i < product?.length; i += 3) {
-        result.push(product.slice(i, i + 3));
-    }
-    console.log(result);
-    // useEffect(() => {
-    // });
+    useEffect(() => {
+        try {
+            let result = [];
+            for (let i = 0; i < product?.length; i += 4) {
+                result.push(product.slice(i, i + 4));
+            }
+            SetSingalProduct(result);
+        } catch (err) {
+            console.error(err);
+
+        }
+
+    }, [product]);
     return (
         <div>
             <div className='Slider_img'>
@@ -79,15 +86,21 @@ function Home() {
             } */}
 
 
-            {result?.slice(0, 5).map((group, i) => (
-                <div className="box" key={i}>
-                    {group.map((item) => (
-                        <img
-                            key={item.id}
-                            src={item.thumbnail}
-                            alt=""
-                            onClick={handler}
-                        />
+            {SingleProduct?.slice(0, 4).map((group, i) => (
+                <div className="container" key={i}>
+                    {group?.map((item) => (
+                        <div className="single_box" key={i}>
+                            <img
+                                src={item.thumbnail}
+                                alt=""
+                                onClick={handler}
+                            />
+                            <p>{item.title}</p>
+                            <div className='value'>
+                            <h3>${item.price}</h3>
+                            <h4>Up to {Math.floor(item.discountPercentage)}% discount</h4>
+                            </div>
+                        </div>
                     ))}
                 </div>
             ))}
