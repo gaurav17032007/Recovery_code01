@@ -3,6 +3,5 @@ let getproduct=[];
 for(let i=0;i<arr.length;i+=3){
     getproduct.push(arr.slice(i,i+3));
 }
-getproduct.slice(0,5).map((item,j)=>console.log(item));
-
+getproduct.slice(0,5).map((item)=>item!==13).map((value)=>console.log(value));
 // console.log(getproduct);
