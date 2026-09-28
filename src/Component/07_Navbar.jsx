@@ -1,7 +1,7 @@
 import '../Css_files/07_Navbar.css';
 import { Link } from "react-router-dom"
 import image1 from '../images/logo.png';
-import image2 from '../images/Home.png';
+import image2 from '../images/Home.svg';
 import image3 from '../images/Cart.png';
 import image4 from '../images/Wishlist.png';
 import image5 from '../images/Account.png';
@@ -10,11 +10,30 @@ import { useNavigate } from 'react-router-dom';
 function Navbar({ setvalue }) {
     const [val, setval] = useState("");
     const navigate = useNavigate();
+    const category = useNavigate();
     function handler(e) {
         e.preventDefault();
         setvalue(val);
         console.log("run");
         navigate("/product_list");
+        setval("");
+    }
+        const handleCategoryChange = (event) => {
+            const selectedValue = event.target.value;
+
+            if (selectedValue === 'Men') {
+                Category();
+            } else if (selectedValue === 'Women') {
+                runWomenFunction();
+            }
+        };
+
+        const runWomenFunction = () => {
+            console.log("Women category selected!");
+        };
+    function Category(e) {
+        // e.preventDefault();
+        category('/categories');
     }
     return (
         <div>
@@ -32,10 +51,10 @@ function Navbar({ setvalue }) {
                             <span>Home</span>
                         </Link>
 
-                        <select className='nav_option'>
-                            <option disabled>Category</option>
-                            <option>Men</option>
-                            <option>Women</option>
+                        <select className='nav_option' onChange={handleCategoryChange}>
+                            <option>Category</option>
+                            <option value="Men">Men</option>
+                            <option value="Women">Women</option>
                         </select>
 
                     </div>

@@ -59,13 +59,122 @@
     font-weight: bold;
 }
 
+.single_box img {
+    background-color: rgb(228, 235, 238);
+    border-radius: 10%;
+    margin: 15px;
+    cursor: pointer;
+}
+
 .single_box p {
     margin: 0;
     padding: 0;
     font-family: "Georgia", serif;
-    width: 300px;
 }
 
-.value {
+.footer {
+    width: 100%;
+    height: 30vh;
+    background-color: rgb(42, 58, 128);
+    color: white;
+    display: flex;
+}
 
+.main_box {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1000px;
+    height: 30vh;
+    overflow: hidden;
+}
+
+.first_heading {
+    width: 300px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.second_heading,
+.third_heading,
+.fourth_heading,
+.five_heading {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo_class {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    font-size: 26px;
+    font-family: 'Playfair Display', serif;
+}
+
+.Shop1 {
+    color: white;
+}
+
+.Ease1 {
+    color: #f4a905;
+}
+
+.first_heading p {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    text-align: left;
+    color: #ccc;
+    /* overflow: scroll; */
+}
+
+.second_heading a,
+.third_heading a,
+.fourth_heading a,
+.five_heading a {
+    text-align: left;
+    text-decoration: none;
+    color: #ccc;
+    margin: 10px;
+}
+
+.fourth_heading span {
+    padding-right: 40px;
+}
+
+.second_heading span,
+.third_heading span,
+.fourth_heading span,
+.five_heading span {
+    margin-top: 30px;
+}
+
+.last_footer {
+    width: 100%;
+    height: 7vh;
+    background-color: rgb(42, 58, 128);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid white;
+    color:#ccc;
+}
+
+.last_footer p {
+    margin-left: 10px;
+}
+
+.built_react {
+    width: 200px;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.built_react img {
+    width: 50px;
+    height: 5vh;
 }
