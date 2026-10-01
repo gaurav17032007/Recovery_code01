@@ -11,10 +11,9 @@ function Navbar({ setvalue }) {
     const [val, setval] = useState("");
     const navigate = useNavigate();
     const category = useNavigate();
-    function handler(e) {
+    function handler(e) { 
         e.preventDefault();
         setvalue(val);
-        console.log("run");
         navigate("/product_list");
         setval("");
     }
