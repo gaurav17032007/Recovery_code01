@@ -18,9 +18,6 @@ function Product_list({ value }) {
         asy();
     }, [value]);
 
-
-
-    // this is have issue if has one or two or less then four product then ui layout is week so first solve this problem
     useEffect(() => {
         let result = [];
         let result1 = [];

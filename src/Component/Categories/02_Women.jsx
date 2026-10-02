@@ -1,7 +1,7 @@
-import '../Css_files/03_Categories.css';
-import CategoriesProduuct from '../Product_Api/Categories_api';
+import '../../Css_files/Categories_css/Women.css';
+import CategoriesProduuct from '../../Product_Api/Categories_api';
 import { useState, useEffect } from 'react';
-function Categories() {
+function Women_fun() {
     const [Categories, SetCategories] = useState(null);
     const [get, setvalue] = useState([]);
     useEffect(() => {
@@ -13,12 +13,12 @@ function Categories() {
         Apifunction();
     }, []);
     useEffect(() => {
-        let Menvalue = [];
-        for (let i = 82; i < Categories?.length; i += 4) {
-            Menvalue.push(Categories.slice(i, i + 4));
+        let Womenvalue = [];
+        for (let i = 172; i < Categories?.length; i += 4) {
+            Womenvalue.push(Categories.slice(i, i + 4));
         }
-        setvalue(Menvalue);
-        console.log(Menvalue);
+        setvalue(Womenvalue);
+        console.log(Womenvalue);
     }, [Categories]);
     return (
         <div>
@@ -43,4 +43,4 @@ function Categories() {
     )
 
 }
-export default Categories;
+export default Women_fun;

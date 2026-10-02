@@ -5,35 +5,33 @@ import image2 from '../images/Home.svg';
 import image3 from '../images/Cart.png';
 import image4 from '../images/Wishlist.png';
 import image5 from '../images/Account.png';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 function Navbar({ setvalue }) {
     const [val, setval] = useState("");
+    const [category, setCategory] = useState("");
     const navigate = useNavigate();
-    const category = useNavigate();
-    function handler(e) { 
+    const Men_category = useNavigate();
+    const Women_category = useNavigate();
+    const HomeCategory = useNavigate();
+    function handler(e) {
         e.preventDefault();
         setvalue(val);
         navigate("/product_list");
         setval("");
     }
-        const handleCategoryChange = (event) => {
-            const selectedValue = event.target.value;
 
-            if (selectedValue === 'Men') {
-                Category();
-            } else if (selectedValue === 'Women') {
-                runWomenFunction();
-            }
-        };
+    useEffect(() => {
 
-        const runWomenFunction = () => {
-            console.log("Women category selected!");
-        };
-    function Category(e) {
-        // e.preventDefault();
-        category('/categories');
-    }
+        if (category === 'Men') {
+            Men_category('/Men_items');
+        } else if (category === 'Women') {
+            Women_category('/Women_items');
+        } else {
+            HomeCategory('/');
+        }
+    }, [category]);
+
     return (
         <div>
 
@@ -45,13 +43,18 @@ function Navbar({ setvalue }) {
                     </div>
 
                     <div className="nav_links">
-                        <Link to="/" className="nav_item">
+                        <Link to="/" className="nav_item"
+                            onClick={() => setCategory("")}>
                             <img src={image2} alt="home icon" />
                             <span>Home</span>
                         </Link>
 
-                        <select className='nav_option' onChange={handleCategoryChange}>
-                            <option>Category</option>
+                        <select
+                            className='nav_option'
+                            value={category}
+                            onChange={(e) => setCategory(e.target.value)}
+                        >
+                            <option value="">Category</option>
                             <option value="Men">Men</option>
                             <option value="Women">Women</option>
                         </select>
@@ -59,7 +62,9 @@ function Navbar({ setvalue }) {
                     </div>
 
                     <div className='Nav_input'>
-
+                        {/* <form>
+                            
+                        </form> */}
                         <input type="text"
                             placeholder='🔍 Search for products, brands and more...'
                             value={val}
@@ -94,13 +99,27 @@ function Navbar({ setvalue }) {
                 </nav>
             </div >
             <div className='Categories'>
-                <span>📱 Electronics</span>
-                <span>👕 Fashion</span>
-                <span>👟 Shoes</span>
-                <span>👜 Bags</span>
-                <span>💄 Beauty</span>
-                <span>🏠 Home & Kitchen</span>
-                <span>🚗 Automotive</span>
+                <Link to='/Electronic'>
+                    <span value="Electronics">📱 Electronics</span>
+                </Link>
+                <Link to='/Shoes'>
+                    <span value="Shoes">👟 Shoes</span>
+                </Link>
+                <Link to='/Fashion'>
+                    <span value="Fashion">👕 Fashion</span>
+                </Link>
+                <Link to='/Bags'>
+                    <span value="Bags">👜 Bags</span>
+                </Link>
+                <Link to='/Beauty'>
+                    <span value="Beauty">💄 Beauty</span>
+                </Link>
+                <Link to='/HomeKitchen'>
+                    <span value="Home & Kitchen">🏠 Home & Kitchen</span>
+                </Link>
+                <Link to='/Automotive'>
+                    <span value="Automotive">🚗 Automotive</span>
+                </Link>
             </div>
         </div>
     )
