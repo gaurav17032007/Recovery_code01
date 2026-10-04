@@ -102,11 +102,11 @@ function Navbar({ setvalue }) {
                 <Link to='/Electronic'>
                     <span value="Electronics">📱 Electronics</span>
                 </Link>
-                <Link to='/Shoes'>
-                    <span value="Shoes">👟 Shoes</span>
-                </Link>
                 <Link to='/Fashion'>
                     <span value="Fashion">👕 Fashion</span>
+                </Link>
+                <Link to='/Shoes'>
+                    <span value="Shoes">👟 Shoes</span>
                 </Link>
                 <Link to='/Bags'>
                     <span value="Bags">👜 Bags</span>

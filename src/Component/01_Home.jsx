@@ -84,8 +84,8 @@ function Home() {
 
             {SingleProduct?.slice(0, 4).map((group, i) => (
                 <div className="container" key={i}>
-                    {group?.map((item) => (
-                        <div className="single_box" key={i}>
+                    {group?.map((item,j) => (
+                        <div className="single_box" key={j}>
                             <img
                                 src={item.thumbnail}
                                 alt=""
