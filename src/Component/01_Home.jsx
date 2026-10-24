@@ -1,7 +1,7 @@
 import '../Css_files/01_Home.css';
 import getproduct from '../Product_Api/Product_api';
 import { useEffect, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import img from '../images/Shoess.png';
 import img1 from '../images/Shut.png';
 import img2 from '../images/Makeup_essetials.png';
@@ -16,25 +16,29 @@ import img10 from '../images/Monitor.png';
 import img11 from '../images/Boat.png';
 import logo from '../images/logo.png';
 import logo1 from '../images/logo.svg';
-function Home() {
+function Home({ SetProductItem }) {
     const [product, setprodeuct] = useState(null);
     const [Index, setIndex] = useState(0);
     const [SingleProduct, SetSingalProduct] = useState([]);
 
+
     const navigator = useNavigate();
     useEffect(() => {
         const call = async function () {
-            const value = await getproduct();
-            setprodeuct(value);
+            const value1 = await getproduct();
+            setprodeuct(value1);
         }
         call();
     }, []);
-    function handler(e) {
-        e.preventDefault();
-        console.log("Image thubnail run");
+
+    const handler = (id) => {
+        // e.preventDefault();
+        if (!id) return;
+        SetProductItem([id]);
+        console.log("Get Product ID : ", id);
+
         navigator('/Product_item');
     }
-
     const images_list = [
         img, img1, img2, img3,
         img4, img5, img6, img7,
@@ -70,6 +74,7 @@ function Home() {
         }
 
     }, [product]);
+
     return (
         <div className='product_img'>
             <div className='Slider_img'>
@@ -84,18 +89,22 @@ function Home() {
 
             {SingleProduct?.slice(0, 4).map((group, i) => (
                 <div className="container" key={i}>
-                    {group?.map((item,j) => (
+                    {group?.map((item, j) => (
                         <div className="single_box" key={j}>
                             <img
-                                src={item.thumbnail}
+                                src={item?.thumbnail}
                                 alt=""
-                                onClick={handler}
-                                />
-                                <p>{item.title}</p>
+                                onClick={() => {
+                                    handler(item)
+                                }}
+                            // value={item.id}
+                            />
+                            <p>{item?.title}</p>
                             <div className='value'>
-                                <h3>${item.price}</h3>
-                                <h4>Up to {Math.floor(item.discountPercentage)}% discount</h4>
+                                <h3>${item?.price}</h3>
+                                <h4>Up to {Math.floor(item?.discountPercentage)}% discount</h4>
                             </div>
+
                         </div>
                     ))}
                 </div>
@@ -113,27 +122,27 @@ function Home() {
 
                     <div className='second_heading'>
                         <span>Quick Links</span>
-                        <a href="#">{`> Home`}</a>
-                        <a href="#">{`> Products`}</a>
-                        <a href="#">{`> Categories`}</a>
-                        <a href="#">{`> Offer`}</a>
+                        <Link to="/">{`> Home`}</Link>
+                        <Link to="/product_list">{`> Products`}</Link>
+                        <span>{`> Categories`}</span>
+                        <span>{`> Offer`}</span>
                     </div>
                     <div className='third_heading'>
                         <span>Customer Support</span>
-                        <a href="#">{`> Customer us`}</a>
-                        <a href="#">{`> FAQ`}</a>
-                        <a href="#">{`> Shipping & Delivery`}</a>
-                        <a href="#">{`> Return & Refunds`}</a>
+                        <span>{`> Customer us`}</span>
+                        <span>{`> FAQ`}</span>
+                        <span>{`> Shipping & Delivery`}</span>
+                        <span>{`> Return & Refunds`}</span>
                     </div>
                     <div className='fourth_heading'>
                         <span>Information</span>
-                        <a href="#">{`> About us`}</a>
-                        <a href="#">{`> Privacy Policy`}</a>
-                        <a href="#">{`> Term & Conditions`}</a>
+                        <span>{`> About us`}</span>
+                        <span>{`> Privacy Policy`}</span>
+                        <span>{`> Term & Conditions`}</span>
                     </div>
                     <div className='five_heading'>
                         <span>Developer</span>
-                        <a href="#">GitHub</a>
+                        <span>GitHub</span>
                         <p></p>
                     </div>
                 </div>

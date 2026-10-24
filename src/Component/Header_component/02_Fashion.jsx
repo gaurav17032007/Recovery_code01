@@ -1,9 +1,13 @@
 import '../../Css_files/Header_css/02_Fashion.css';
 import FashionProduuct from '../../Product_Api/Categories_api';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { UserProvider } from '../../App';
+import { useNavigate } from 'react-router-dom';
 function Fashion_fun() {
     const [Fashion, SetFashion] = useState(null);
     const [get, setvalue] = useState([]);
+    const { SetProductItem } = useContext(UserProvider);
+    const navigator = useNavigate();
     useEffect(() => {
         const Apifunction = async () => {
             let value = await FashionProduuct();
@@ -12,6 +16,11 @@ function Fashion_fun() {
         }
         Apifunction();
     }, []);
+    const handler = (id) => {
+        if (!id) return;
+        SetProductItem([id]);
+        navigator('/Product_item');
+    }
     useEffect(() => {
         let Menvalue = [];
         let NewArr = [];
@@ -21,11 +30,11 @@ function Fashion_fun() {
         Menvalue.push(FashionValue2);
 
         let arr = Menvalue.reduce((acc, curr) => acc.concat(curr), []);
-        console.log(NewArr);
 
         for (let i = 0; i < arr?.length; i += 4) {
             NewArr.push(arr.slice(i, i + 4));
         }
+        console.log(NewArr);
         setvalue(NewArr);
     }, [Fashion]);
     return (
@@ -33,9 +42,12 @@ function Fashion_fun() {
             <h1>These are the Fashion products</h1>
             {get?.slice(0, 4)?.map((group, i) => (
                 <div key={i}>
-                    {group?.map((item,j) => (
+                    {group?.map((item, j) => (
                         <div key={j}>
-                            <img src={item?.thumbnail} alt="" />
+                            <img src={item?.thumbnail} alt=""
+                                onClick={() => {
+                                    handler(item);
+                                }} />
                             <p>{item?.title}</p>
                         </div>
                     ))}

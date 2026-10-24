@@ -132,7 +132,11 @@
 .second_heading a,
 .third_heading a,
 .fourth_heading a,
-.five_heading a {
+.five_heading a,
+.second_heading > span:not(:first-child),
+.third_heading > span:not(:first-child),
+.fourth_heading > span:not(:first-child),
+.five_heading > span:not(:first-child) {
     text-align: left;
     text-decoration: none;
     color: #ccc;

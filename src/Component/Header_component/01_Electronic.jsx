@@ -1,9 +1,13 @@
 import '../../Css_files/Header_css/01_Electronic.css';
 import CategoriesProduuct from '../../Product_Api/Categories_api';
-import { useState, useEffect } from 'react';
+import { useState, useEffect,useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { UserProvider } from '../../App';
 function Electronic_fun() {
     const [Categories, SetCategories] = useState(null);
     const [Data, SetData] = useState([]);
+    const navigator = useNavigate();
+    const {SetProductItem}=useContext(UserProvider);
     useEffect(() => {
         const fetchData = async () => {
             const data = await CategoriesProduuct();
@@ -12,6 +16,12 @@ function Electronic_fun() {
 
         fetchData();
     }, []);
+
+    const handler = (id) => {
+        if (!id) return;
+        SetProductItem([id]);
+        navigator('/Product_item');
+    }
 
     useEffect(() => {
         const ElectronicsValue = Categories?.slice(121, 136);
@@ -36,6 +46,9 @@ function Electronic_fun() {
                                     <img
                                         src={item.thumbnail}
                                         alt=""
+                                        onClick={() => {
+                                            handler(item);
+                                        }}
                                     />
                                     <p>{item.title}</p>
                                     <div className='value1'>

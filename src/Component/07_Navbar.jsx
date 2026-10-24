@@ -3,17 +3,17 @@ import { Link } from "react-router-dom"
 import image1 from '../images/logo.png';
 import image2 from '../images/Home.svg';
 import image3 from '../images/Cart.png';
-import image4 from '../images/Wishlist.png';
+import image4 from '../images/Blank_heart.png';
 import image5 from '../images/Account.png';
+import Account from './06_Account';
+import Login from './Login';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-function Navbar({ setvalue }) {
+function Navbar({ setvalue, ShowAccount, SetShowAccount, ShowLogin, SetShowLogin }) {
     const [val, setval] = useState("");
     const [category, setCategory] = useState("");
     const navigate = useNavigate();
-    const Men_category = useNavigate();
-    const Women_category = useNavigate();
-    const HomeCategory = useNavigate();
+
     function handler(e) {
         e.preventDefault();
         setvalue(val);
@@ -24,11 +24,11 @@ function Navbar({ setvalue }) {
     useEffect(() => {
 
         if (category === 'Men') {
-            Men_category('/Men_items');
+            navigate('/Men_items');
         } else if (category === 'Women') {
-            Women_category('/Women_items');
+            navigate('/Women_items');
         } else {
-            HomeCategory('/');
+            navigate('/');
         }
     }, [category]);
 
@@ -74,10 +74,12 @@ function Navbar({ setvalue }) {
                     </div>
 
                     <div className='Wishlist_plus'>
+                        <Link to='/wish_list'>
                         <div className='Heart'>
                             <img src={image4} type='checkbox' alt="" />
                             <span>Wishlist</span>
                         </div>
+                        </Link>
 
                         <div className='Cart_img'>
 
@@ -89,10 +91,28 @@ function Navbar({ setvalue }) {
                         </div>
 
                         <div className='Account'>
-                            <Link to='/account'>
+                            <button onClick={() => {
+                                SetShowLogin(false);
+                                SetShowAccount(true);
+                            }}>
                                 <img src={image5} alt="" />
                                 <span>Account</span>
-                            </Link>
+                            </button>
+
+                            {ShowAccount && (
+                                <Account
+                                    SetShowAccount={SetShowAccount}
+                                    SetShowLogin={SetShowLogin}
+                                />
+                            )}
+                            {ShowLogin && (
+                                <Login
+                                    SetShowLogin={SetShowLogin}
+                                    SetShowAccount={SetShowAccount}
+                                />
+                            )}
+
+
                         </div>
                     </div>
                     {/* <img src={Account_img} alt="" /> */}
